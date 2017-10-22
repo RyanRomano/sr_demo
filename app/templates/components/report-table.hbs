@@ -1,0 +1,9 @@
+<table class="report-table">
+  <!-- Table Header -->
+  {{report-table-header}}
+
+  <!-- Display Each Report Item -->
+  {{#each model as |reportItem|}}
+    {{report-table-data reportItem=reportItem}}
+  {{/each}}
+</table>
