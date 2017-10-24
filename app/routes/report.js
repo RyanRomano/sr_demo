@@ -6,8 +6,7 @@ export default Route.extend({
         return new Ember.RSVP.Promise((resolve, reject) => {
             Ember.$.get("/sample.json").then(
                 (response) => {
-                    // We only ever have 1 user in our JSON file,
-                    // resolve them directly
+                    //Just 1 user in our JSON file
                     resolve(response.data[0])
                 },
                 reject

@@ -2,8 +2,15 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
+}
+
+body, h1, h2 {
     padding: 0;
+    margin: 0;
+}
+
+strong {
+    font-weight: bold;
 }
 
 .line {
@@ -12,39 +19,28 @@ body {
     background-color: rgb(0, 180, 255);
 }
 
-h1, h2 {
-    padding: 0;
-    margin: 0;
-}
-
 p {
     margin: .4em 0;
-    font-weight: 100;
 }
 
-
 .report {
-    margin: 4em;
-    margin-bottom: 1em;    
+    margin: 4em 4em 1em 4em;
 }
 
 .report-header {
     display: flex;
     margin-bottom: 2em;
-    overflow: hidden;
 }
 
 .report-header .info-container {
-    flex-grow:1;
+    flex-grow: 1;
     display: flex;
 }
 
 .report-header h2 {
     color: rgb(0, 180, 255);
     font-size: 1.25em;
-    font-weight: 900;
 }
-
 
 .profile_image {
     width: 100px;
@@ -54,8 +50,6 @@ p {
 
 .sr_insights_logo {
     width: 18vw;
-    height: auto;
-
 }
 
 .report-table-header {
@@ -98,6 +92,7 @@ p {
 .tableWrap {
     overflow-x: scroll;
 }
+
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent; /* make scrollbar transparent */
@@ -105,22 +100,21 @@ p {
 
 table {
     min-width: 100%;
-    margin-bottom: 10em;
-    border-collapse: collapse;    
+    margin-bottom: 7em;
+    border-collapse: collapse;   
 }
 
 th, td {
-    font-size: .65em;
-}
-
-th strong {
-    margin-right: 1em;
+    font-size: .7em;
 }
 
 .report-table-data {
     height: 30px;
 }
 
+.report-table-data td {
+    padding-left: 5px;
+}
 
 .report-table-data:nth-child(odd){
     background-color: rgb(232, 240, 254);
@@ -135,12 +129,12 @@ th strong {
     text-align: center;
 }
 
-.gpaSection > strong{
+.gpaSection strong{
     position: relative;
     top: 13px;    
 }
-@media screen and (max-width: 860px) {
 
+@media screen and (max-width: 860px) {
     .report {
         margin: 2em;
     }

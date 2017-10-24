@@ -1,6 +1,7 @@
 import { helper } from '@ember/component/helper';
 
 export function gpacolor(params/*, hash*/) {
+  //params is gpa object with min/25/50/75/max fields
   const gpa = parseFloat(params[0]['50%']);
   if (gpa < 3.6) {
     return "#75ace5";  
