@@ -1,14 +1,42 @@
 <tr onload="colorGpaBackground" class="report-table-data">
     <td>{{reportItem.school}}</td>
-    <td class="tPush">{{reportItem.division}}</td>
+    
+    <!-- Division -->
+    {{#if (eq reportItem.division "")}}
+        <td class="tPush">II</td>
+    {{else}}
+        <td class="tPush">{{reportItem.division}}</td>
+    {{/if}}
+    
     <td>{{reportItem.conference}}</td>
     <td class="tPush">{{reportItem.ranking}}</td>
     <td class="tPush">{{reportItem.gpa.min}}</td>
     <td class="tPush">{{get reportItem.gpa '25%'}}</td>
-    <td class="gpaSection tPush" >{{get reportItem.gpa '50%'}}</td>
+
+    <!-- GPA 50% -->
+    <td class="gpaSection tPush" style="background: {{gpacolor reportItem.gpa}};">{{get reportItem.gpa '50%'}}</td>
+
     <td class="tPush">{{get reportItem.gpa '75%'}}</td>
     <td class="tPush">{{reportItem.gpa.max}}</td>
-    <td class="tPush">{{reportItem.sat.reading.min}}-{{reportItem.sat.reading.max}}</td>
-    <td class="tPush">{{reportItem.sat.math.min}}-{{reportItem.sat.math.max}}</td>
-    <td class="tPush">{{reportItem.act.min}}-{{reportItem.act.max}}</td>
+
+    <!-- SAT Reading -->
+    {{#if (eq reportItem.sat.reading.min "N/A")}}
+        <td class="tPush">Not Reported</td>
+    {{else}}
+        <td class="tPush">{{reportItem.sat.reading.min}}-{{reportItem.sat.reading.max}}</td>
+    {{/if}}
+    
+    <!-- SAT Math -->
+    {{#if (eq reportItem.sat.math.min "N/A")}}
+        <td class="tPush">Not Reported</td>
+    {{else}}
+        <td class="tPush">{{reportItem.sat.math.min}}-{{reportItem.sat.math.max}}</td>
+    {{/if}}
+
+    <!-- ACT -->
+    {{#if (eq reportItem.act.min "N/A")}}
+        <td class="tPush">Not Reported</td>
+    {{else}}
+        <td class="tPush">{{reportItem.act.min}}-{{reportItem.act.max}}</td>
+    {{/if}}
 </tr>
