@@ -16,7 +16,7 @@ export function gpacolor(params/*, hash*/) {
     return "#b8a1cb";
   } else if (gpa < 3.9){
     return "#c194b5";
-  } else if (gpa < 4.5){
+  } else if (gpa < 4.1){
     return "#d7737d";
   }
 }

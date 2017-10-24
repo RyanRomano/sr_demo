@@ -1,9 +1,11 @@
-<table>
-  <!-- Table Header -->
-  {{report-table-header}}
+<div class="tableWrap">
+  <table>
+    <!-- Table Header -->
+    {{report-table-header}}
 
-  <!-- Display Each Report Item -->
-  {{#each model as |reportItem|}}
-    {{report-table-data reportItem=reportItem value=value}}
-  {{/each}}
-</table>
+    <!-- Display Each Report Item -->
+    {{#each model as |reportItem|}}
+      {{report-table-data reportItem=reportItem value=value}}
+    {{/each}}
+  </table>
+</div>
