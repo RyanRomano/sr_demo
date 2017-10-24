@@ -39,12 +39,16 @@ p {
 
 .report-header h2 {
     color: rgb(0, 180, 255);
-    font-size: 1.35em;
+    font-size: 1.25em;
+}
+
+.report-header p {
+    font-size: .89em;
 }
 
 .profile_image {
-    width: 6.25em;
-    height: 6.25em;
+    width: 6em;
+    height: 6em;
     border-radius: 100%;
 }
 
@@ -59,6 +63,10 @@ p {
 
 .info-block {
     margin-left: 1em;
+}
+
+.info-block:first-child{ 
+    margin-top: 5px;
 }
 
 .info-block:last-child{
